@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Journal Subscription</title>
+    <style>
+        body{
+            margin-left:25%;
+            margin-top:5%;
+            margin-right:25%;
+            color:bisque;
+            border-style:double;
+            padding: 25px;
+            padding-top: 40px;;
+        }
+        form {
+            display: contents;
+        }
+        label {
+            display:ruby-base;
+            color:blanchedalmond;
+        }
+        body {
+            background-color:#3c3b3f;
+        }
+        input[type=submit] {
+            margin-left: 80px;
+            border-radius:50%;
+            width:150px;
+            height:30px;
+            cursor:pointer;
+        }
+        input[type=checkbox] {
+            width:90px;
+            height:15px;
+            cursor:pointer;
+        }
+        input[type=text] {
+            width: 80%;
+            padding: 10px 20px;
+            margin: 8px 4px;
+            box-sizing:border-box;
+          }
+        input[type=range] {
+            width:70%;
+            cursor:pointer;
+        }
+        input[type=radio] {
+            width:15px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="startingDate">Starting Date:</label>
+        <input type="date" id="startingDate" name="startingDate" required><br><br>
+
+        <label for="subscriptionDuration">Subscription Duration (in years):</label><br>
+        <input type="range" id="subscriptionDuration" name="subscriptionDuration" min="1" max="10" value="1" oninput="durationOutput.value = subscriptionDuration.value">
+        <output name="durationOutput" id="durationOutput">1</output> year(s)<br><br>
+
+        <label>Occupation:</label>
+        <input type="radio" id="student" name="occupation" value="student">
+        <label for="student">Student</label>
+        <input type="radio" id="professional" name="occupation" value="professional">
+        <label for="professional">Professional</label><br><br>
+
+        <label for="journalTitles">Journal Titles:</label><br>
+            <input type="checkbox" id="title1" name="title1" value="science">
+            <label for="science">Science</label><br>
+            <input type="checkbox" id="title2" name="title2" value="technology">
+            <label for="technology">Technology</label><br>
+            <input type="checkbox" id="title3" name="title3" value="arts">
+            <label for="arts">Arts</label><br>
+            <input type="checkbox" id="title4" name="title4" value="business">
+            <label for="business">Business</label><br>
+            <input type="checkbox" id="title5" name="title5" value="music">
+            <label for="music">Music</label><br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+        
+        <label for="numSubscriptions">Number of Subscriptions (10-200):</label><br>
+        <input type="text" id="numSubscriptions" name="numSubscriptions" min="10" max="200" required><br><br>
+
+        <label for="websiteURL">Website URL (start with http:// or https://):</label><br>
+        <input type="text" id="websiteURL" name="websiteURL" pattern="https?://.+"><br><br>
+
+        <input type="submit" value="Subscribe">
+    </form>
+</body>
+</html>
